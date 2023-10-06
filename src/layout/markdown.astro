@@ -1,0 +1,9 @@
+---
+import { SarkaraLayout, Paper } from "@cieloazul310/astro-sarkara";
+import { siteMetadata, menu } from "../data";
+---
+<SarkaraLayout siteMetadata={siteMetadata} menu={menu}>
+	<Paper>
+		<slot />
+	</Paper>
+</SarkaraLayout>
