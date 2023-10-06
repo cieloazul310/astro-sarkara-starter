@@ -1,16 +1,29 @@
 # Astro Sarkara Starter Kit
 
+Astro starter based on [@cieloazul310/astro-sarkara](https://github.com/cieloazul310/astro-sarkara) package.
+
 ```sh
 git clone git@github.com:cieloazul310/astro-sarkara-starter.git
 ```
 
-Astro <https://astro.build/>  
-Panda CSS <https://panda-css.com/>
+[![npm version](https://badge.fury.io/js/@cieloazul310%2Fastro-sarkara.svg)](https://badge.fury.io/js/@cieloazul310%2Fastro-sarkara) [![Netlify Status](https://api.netlify.com/api/v1/badges/86a9d564-8ece-455e-a4d7-1f9806f8ebc8/deploy-status)](https://app.netlify.com/sites/astro-sarkara-starter/deploys)
+
+@cieloazul310/astro-sarkara  
+<https://github.com/cieloazul310/astro-sarkara>
+
+Astro  
+<https://astro.build/>
+
+Panda CSS  
+<https://panda-css.com/>
 
 ## Demo
 
-GitHub Pages: <https://cieloazul310.github.io/astro-sarkara-starter>  
-Netlify: <https://astro-sarkara-starter.netlify.app>
+GitHub Pages  
+<https://cieloazul310.github.io/astro-sarkara-starter>
+
+Netlify  
+<https://astro-sarkara-starter.netlify.app>
 
 ## 🚀 Project Structure
 
