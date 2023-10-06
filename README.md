@@ -1,14 +1,16 @@
-# Astro Starter Kit: Minimal
+# Astro Sarkara Starter Kit
 
 ```sh
-npm create astro@latest -- --template minimal
+git clone git@github.com:cieloazul310/astro-sarkara-starter.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Astro <https://astro.build/>  
+Panda CSS <https://panda-css.com/>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Demo
+
+GitHub Pages: <https://cieloazul310.github.io/astro-sarkara-starter>  
+Netlify: <https://astro-sarkara-starter.netlify.app>
 
 ## 🚀 Project Structure
 
@@ -18,6 +20,8 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   ├── data/
+│   │   └── index.ts
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -42,6 +46,16 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Deploy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### GitHub Pages
+
+1. Settings > Code and automation > Actions > General
+    Workflow permissions: **Read and write permissions**
+2. Settings > Code and automation > Pages
+    Build and deployment Source: **GitHub Actions**
+
+### Netlify
+
+1. Site configuration > Build & Deploy > Continuous deployment
+    Build settings Build command: **npm run build -- --site $URL**
