@@ -6,6 +6,7 @@ export const siteMetadata = {
 };
 export const menu = defineMenu([
   { title: "Top", href: "/" },
+  { title: "Page 2", href: "/page-2" },
   {
     title: "Link",
     items: [

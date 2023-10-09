@@ -28,7 +28,7 @@ module.exports = {
       },
     },
     {
-      files: ["panda.config.ts"],
+      files: ["panda.config.ts", "astro.config.ts"],
       rules: {
         "import/no-extraneous-dependencies": "off",
       },
