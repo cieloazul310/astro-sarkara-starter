@@ -8,8 +8,12 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    paths-ignore:
-      - README.md
+    paths:
+      - public/**/*
+      - src/**/*
+      - astro.config.ts
+      - package.json
+      - panda.config.ts
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

@@ -57,6 +57,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          token: ${{ secrets.PAT }}
           commit-message: 'update @cieloazul310/astro-sarkara'
           branch: update_package
           branch-suffix: timestamp
