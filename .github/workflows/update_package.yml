@@ -51,7 +51,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       
       - name: Upgrade astro-sarkara
-        run: ${{ steps.detect-package-manager.outputs.manager }} update @cieloazul310/astro-sarkara
+        run: ${{ steps.detect-package-manager.outputs.manager }} install @cieloazul310/astro-sarkara
       
       - name: create PR
         uses: peter-evans/create-pull-request@v5
