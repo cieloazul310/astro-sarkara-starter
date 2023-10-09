@@ -61,6 +61,6 @@ jobs:
           commit-message: 'update @cieloazul310/astro-sarkara'
           base: main
           branch: update_package
-          branch-suffix: timestamp
+          branch-suffix: short-commit-hash
           delete-branch: true
           title: 'update astro-sarkara'
