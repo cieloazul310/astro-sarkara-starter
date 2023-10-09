@@ -53,12 +53,13 @@ jobs:
       - name: Upgrade astro-sarkara
         run: ${{ steps.detect-package-manager.outputs.manager }} install @cieloazul310/astro-sarkara
       
-      - name: create PR
+      - name: Create PR
         uses: peter-evans/create-pull-request@v5
         with:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'update @cieloazul310/astro-sarkara'
+          base: main
           branch: update_package
           branch-suffix: timestamp
           delete-branch: true
