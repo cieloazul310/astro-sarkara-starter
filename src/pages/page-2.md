@@ -25,6 +25,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wqp71DOJ3aY?si=dcsg1Uh0IZB3MW3j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### List
+
 #### Unordered list
 
 - Sarkara
@@ -32,3 +34,30 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 - Satou
 
 #### Ordered list
+
+1. Sunset Boulevard
+2. High Noon
+3. The Lady Vanishes
+
+### Code
+
+```ts
+// panda.config.ts
+import { defineSarkaraConfig } from "@cieloazul310/astro-sarkara";
+
+export default defineSarkaraConfig({
+  palette: { primary: "indigo", secondary: "amber" },
+  include: ["./src/**/*.{js,ts,astro}"],
+});
+```
+
+### Table
+
+| # | Club              | PTS |  P | GD |
+|:-:|:------------------|:---:|:--:|:--:|
+| 1 | FC Machida Zelvia |  72 | 37 | 35 |
+| 2 | Shimizu S-Pulus   |  67 | 38 | 36 |
+| 3 | Tokyo Verdy       |  65 | 38 | 22 |
+| 4 | Jubilo Iwata      |  65 | 38 | 21 |
+| 5 | JEF United Chiba  |  61 | 38 |  9 |
+| 6 | V-Varen Nagasaki  |  58 | 38 | 12 |
