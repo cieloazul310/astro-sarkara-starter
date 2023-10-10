@@ -1,9 +1,15 @@
 ---
-title: Astro Sarkara
+title: Astro Sarkara Starter
 layout: ../layout/markdown.astro
 ---
 
 This is `astro-sarkara` starter built with [Astro] and [Panda CSS].
+
+## Astro Sarkara
+
+> Astro components and layout package built with Panda CSS.
+
+<https://github.com/cieloazul310/astro-sarkara>
 
 ## Astro
 
