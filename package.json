@@ -16,6 +16,7 @@
     "rehype-class-names": "^1.0.14"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^1.1.1",
     "@pandacss/astro": "^0.15.5",
     "@pandacss/dev": "^0.15.5",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
