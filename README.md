@@ -3,7 +3,7 @@
 Astro starter based on [@cieloazul310/astro-sarkara](https://github.com/cieloazul310/astro-sarkara) package.
 
 ```sh
-git clone git@github.com:cieloazul310/astro-sarkara-starter.git
+npm create astro@latest -- --template cieloazul310/astro-sarkara-starter
 ```
 
 [![npm version](https://badge.fury.io/js/@cieloazul310%2Fastro-sarkara.svg)](https://badge.fury.io/js/@cieloazul310%2Fastro-sarkara) [![Netlify Status](https://api.netlify.com/api/v1/badges/86a9d564-8ece-455e-a4d7-1f9806f8ebc8/deploy-status)](https://app.netlify.com/sites/astro-sarkara-starter/deploys)
@@ -33,8 +33,13 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   ├── components/
+│   ├── content
+│   │   └── index.ts
 │   ├── data/
 │   │   └── index.ts
+│   ├── layout/
+│   │   └── markdown.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -58,6 +63,14 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Configure
+
+### panda.config.ts
+
+```ts
+
+```
 
 ## Deploy
 
