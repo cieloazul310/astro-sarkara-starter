@@ -6,7 +6,7 @@ export const siteMetadata = {
 };
 export const menu = defineMenu([
   { title: "Top", href: "/" },
-  { title: "Page 2", href: "/page-2" },
+  { title: "Posts", href: "/posts" },
   {
     title: "Link",
     items: [
@@ -19,3 +19,4 @@ export const menu = defineMenu([
     ],
   },
 ]);
+export const pageSize = 25;

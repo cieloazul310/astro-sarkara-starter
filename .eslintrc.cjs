@@ -33,5 +33,11 @@ module.exports = {
         "import/no-extraneous-dependencies": "off",
       },
     },
+    {
+      files: ["src/content/config.ts"],
+      rules: {
+        "import/prefer-default-export": "off",
+      },
+    }
   ],
 };
