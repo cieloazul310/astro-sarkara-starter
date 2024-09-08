@@ -7,8 +7,10 @@ import {
   ArticleList,
   Pagination,
 } from "@cieloazul310/astro-sarkara";
-import PostListItem from "../../components/PostListItem.astro";
-import { pageSize, menu, siteMetadata } from "../../data";
+import PostListItem from "@/components/post-list-item.astro";
+import { pageSize, menu, siteMetadata } from "@/data";
+
+import "@/index.css";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   // Load your data with fetch(), Astro.glob(), etc.
