@@ -1,6 +1,4 @@
-import {
-  defineSarkaraConfig,
-} from "@cieloazul310/astro-sarkara/preset";
+import { defineSarkaraConfig } from "@cieloazul310/astro-sarkara/preset";
 
 // https://panda-css.com/docs/references/config
 export default defineSarkaraConfig({
@@ -9,12 +7,13 @@ export default defineSarkaraConfig({
   palette: { primary: "indigo", secondary: "amber" },
 
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,ts,astro,mdx}"],
+  include: [
+    "./src/**/*.{js,ts,astro,mdx}",
+    "./node_modules/@cieloazul310/**/*.{js,ts,astro}",
+  ],
 
   // customizing theme
   theme: {
-    extend: {
-
-    },
+    extend: {},
   },
 });

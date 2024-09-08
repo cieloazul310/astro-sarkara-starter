@@ -51,7 +51,9 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   │   ├── [...page].astro <= for post list pages
 │   │   │   └── [...slug].astro <= for each `.md/.mdx` page
 │   │   └── index.mdx
-│   └── utils/
+│   ├── utils/
+│   ├── index.css
+│   └── mdx-classes.ts
 └── package.json
 ```
 
@@ -90,7 +92,10 @@ export default defineSarkaraConfig({
   palette: { primary: "indigo", secondary: "amber" },
 
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,ts,astro,mdx}"],
+  include: [
+    "./src/**/*.{js,ts,astro,mdx}",
+    "./node_modules/@cieloazul310/**/*.{js,ts,astro}",
+  ],
 
   // customizing theme
   theme: {
