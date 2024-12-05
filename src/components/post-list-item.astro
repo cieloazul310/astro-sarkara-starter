@@ -4,13 +4,13 @@ import { ArticleListItem } from "@cieloazul310/astro-sarkara";
 import { dateString } from "../utils";
 
 interface Props {
-  post: CollectionEntry<"posts">;
+  post: CollectionEntry<"post">;
 }
 const { post } = Astro.props;
 ---
 
 <ArticleListItem
-  href={`/posts/${post.slug}`}
+  href={`/post/${post.id}`}
   title={post.data.title}
   image={post.data.featuredImg?.src}
   imageAlt={post.data.featuredImgAlt}
