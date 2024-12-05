@@ -36,24 +36,27 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
+├── content (Astro v5)
+│   └── post/ <= Markdown / MDX contents
 ├── public/
 ├── src/
 │   ├── components/
-│   ├── content
-│   │   ├── posts/ <= Markdown / MDX contents
-│   │   └── config.ts
 │   ├── data/
 │   │   └── index.ts
 │   ├── layout/
 │   │   └── markdown.astro
 │   ├── pages/
-│   │   ├── posts/
+│   │   ├── post/
 │   │   │   ├── [...page].astro <= for post list pages
 │   │   │   └── [...slug].astro <= for each `.md/.mdx` page
 │   │   └── index.mdx
 │   ├── utils/
 │   ├── index.css
+│   ├── content.config.ts (Astro v5)
 │   └── mdx-classes.ts
+├── astro.config.ts
+├── panda.config.ts
+├── postcss.config.cjs
 └── package.json
 ```
 
