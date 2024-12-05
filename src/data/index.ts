@@ -6,7 +6,7 @@ export const siteMetadata = defineSiteMetadata({
 });
 export const menu = defineMenu([
   { title: "Top", href: "/" },
-  { title: "Posts", href: "/posts" },
+  { title: "Post", href: "/post" },
   {
     title: "Link",
     items: [

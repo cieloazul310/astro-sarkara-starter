@@ -1,6 +1,6 @@
 ---
 /* eslint-disable-next-line import/no-unresolved */
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import type { InferGetStaticPropsType } from "astro";
 import {
   SarkaraLayout,
@@ -19,7 +19,7 @@ import { dateString } from "@/utils";
 import "@/index.css";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("posts", ({ data }) =>
+  const allPosts = await getCollection("post", ({ data }) =>
     import.meta.env.PROD ? data.draft !== true : true,
   );
 
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
       return {
         params: {
-          slug: post.slug,
+          slug: post.id,
         },
         props: {
           post,
@@ -48,13 +48,14 @@ const { post, left, right } = Astro.props;
 const navigation = useNavigation(
   { left, right },
   {
-    href: (obj) => `/posts/${obj.slug}`,
+    href: (obj) => `/post/${obj.id}`,
     primaryText: (obj) => obj.data.title,
     secondaryText: (obj) => dateString(obj.data.date),
   },
 );
-const entry = await getEntry("posts", post.slug);
-const { Content } = await entry.render();
+const entry = await getEntry("post", post.id);
+if (!entry) return;
+const { Content } = await render(entry);
 ---
 
 <SarkaraLayout
@@ -88,6 +89,6 @@ const { Content } = await entry.render();
     </hgroup>
   </Paper>
   <Navigation {...navigation} />
-  <PaperLink href="/posts">Posts Top</PaperLink>
+  <PaperLink href="/post">Post Top</PaperLink>
   <Navigation {...navigation} direction="column" slot="sidebar-top" />
 </SarkaraLayout>
