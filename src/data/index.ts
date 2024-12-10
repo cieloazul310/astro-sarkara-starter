@@ -1,8 +1,8 @@
 import { defineSiteMetadata, defineMenu } from "@cieloazul310/astro-sarkara";
 
 export const siteMetadata = defineSiteMetadata({
-	title: "Astro Sarkara Starter",
-	description: "Starter project for astro-sarkara."
+  title: "Astro Sarkara Starter",
+  description: "Starter project for astro-sarkara.",
 });
 export const menu = defineMenu([
   { title: "Top", href: "/" },

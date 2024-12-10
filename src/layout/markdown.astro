@@ -5,15 +5,20 @@ import { siteMetadata, menu } from "@/data";
 import "@/index.css";
 
 interface Props {
-	frontmatter: {
-		title: string;
-	} | null;
+  frontmatter: {
+    title: string;
+  } | null;
 }
 
 const { frontmatter } = Astro.props;
 ---
-<SarkaraLayout title={frontmatter?.title} siteMetadata={siteMetadata} menu={menu}>
-	<Paper>
-		<slot />
-	</Paper>
+
+<SarkaraLayout
+  title={frontmatter?.title}
+  siteMetadata={siteMetadata}
+  menu={menu}
+>
+  <Paper>
+    <slot />
+  </Paper>
 </SarkaraLayout>
