@@ -1,36 +1,33 @@
+import { cwd } from "process";
+import { resolve } from "path";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-import importPlugin from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
 import eslintPluginAstro from "eslint-plugin-astro";
-import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import astroParser from "astro-eslint-parser";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import eslintConfigPrettier from "eslint-config-prettier";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
+const project = resolve(cwd(), "tsconfig.json");
+
+export default defineConfig([
   pluginJs.configs.recommended,
-  importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommended,
-  {
-    plugins: {
-      "jsx-a11y": jsxA11yPlugin,
-    },
-  },
-  ...eslintPluginAstro.configs["jsx-a11y-recommended"],
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
   {
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2024,
       sourceType: "module",
       globals: { ...globals.browser, ...globals.node },
     },
   },
   {
     settings: {
-      "import/resolver": {
-        typescript: {},
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver({ project })],
     },
   },
   {
@@ -43,11 +40,5 @@ export default [
       },
     },
   },
-  {
-    files: ["postcss.config.cjs"],
-    rules: {
-      "@typescript-eslint/no-require-imports": "off",
-    },
-  },
   eslintConfigPrettier,
-];
+]);
